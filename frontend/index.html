@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BoF Rapid Trade</title>
+</head>
+<body>
+    <div id="binary-background"></div>
+    <div class="header">
+        <div class="left-header">
+            <img id="logo" src="/assets/BoFLogo.svg" alt="Bank of Fortytwo Logo">
+            <audio id="myAudio" src="/assets/background_song.wav" autoplay loop></audio>
+            <button id="play_music" type="button" onclick="playAudio()"></button>
+            <span id="username-display"></span>
+        </div>
+        <div class="right-header">
+            <div id="how-to">
+                <p>
+                    HOW TO PLAY:
+                </p>
+                <p>
+                    Warren Buffett once said, "If you aren't willing to own a stock for 10 years,
+                    don't even think about owning it for 10 minutes". <span class="red">F*ck Warren Buffett</span>. 
+                    Your goal is to <span class="green">time the market</span>.
+                </p>
+                <p>
+                    Press the <span class="green">'4'</span> key when you want to BUY. Press the <span class="red">'2'</span> key when you want to SELL.
+                </p>
+                <p>
+                    Remember. Buy <span>LOW</span>. Sell <span>HIGH</span>.
+                </p>
+                <p>
+                    Press ENTER to start.
+                </p>
+            </div>
+            <form id="login-form" action="" method="post" autocomplete="off">
+                <label for="username">USERNAME</label>
+                <input type="text" name="username" id="username">
+                <label for="password">PASSWORD</label>
+                <input type="test" name="password" id="password">
+                <span id="message"></span>
+                <input type="submit" value="LOGIN" id="submit-login">
+                <input type="submit" value="REGISTER" id="submit-register">
+                <input type="button" value="CANCEL" id="cancel-login">
+            </form>
+            <button type="button" id="login-register">LOGIN/REGISTER</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="game-title">
+            <h1>TRADING SIMULATOR</h1>
+            <img src="/assets/BoFLogoType.svg" alt="">
+        </div>
+        <div class="game">
+            <div class="scoreboard">
+                <div class="left">
+                    <div class="stock-label">
+                        <h3>TICKET SYMBOL</h3>
+                        <h2 id="stock-ticker">$</h2>
+                    </div>
+                    <div class="stock-price">
+                        <h3>STOCK PRICE</h3>
+                        <h2 id="stock-price-text"></h2>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="market-score">
+                        <h3>MARKET BALANCE</h3>
+                        <h2 id="market-balance"></h2>
+                    </div>
+                    <div class="your-score">
+                        <h3>YOUR BALANCE</h3>
+                        <h2 id="your-score"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="y-axis">
+                    <span>STOCK PRICE</span>
+                </div>
+                <div class="left-column">
+                    LEADERBOARD
+                    <div id="leaderboard">
+
+                    </div>
+                </div>
+                <div id="grid-container">
+                    <div id="graph-container">
+                        <canvas id="stock-graph"></canvas>
+                    </div>
+                </div>
+                <div class="right-coluumn">
+                    <div class="banner">
+                        <div id="action-toggle"></div>
+                    </div>
+                    <span id="history-label">HISTORY</span>
+                    <div id="actions"></div>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <div class="buttons">
+                    <div class="buy-button">
+                        <audio id="sound" src="/assets/click_sound.mp3"></audio>
+                        <div class="button-key">
+                            <span class="key">4</span>
+                        </div>
+                        <span class="label">BUY</span>
+                    </div>
+                    <div class="sell-button">
+                        <audio id="sound" src="/assets/click_sound.mp3"></audio>
+                        <div class="button-key">
+                            <span class="key">2</span>
+                        </div>
+                        <span class="label">SELL</span>
+                    </div>
+                </div>
+                <div id="results">
+                    With the trades you made, you profited a total of <span id="profit"></span>,
+                    beating the market by a total of <span id="market-difference"></span>. That
+                    is a <span id="percentage"></span> gain/loss. Refresh to play again.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

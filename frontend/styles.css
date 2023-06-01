@@ -1,0 +1,452 @@
+
+
+body {
+    background-color: #171717;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;;
+    z-index: 1;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+#how-to {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    position: absolute;
+    top: 23em;
+    left: 115em;
+    width: 110px;
+    font-size: 10px;
+}
+
+p {
+    justify-content: center;
+    align-items: center;
+}
+
+.right-header {
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.left-header {
+    height: 100px;
+    display: flex;
+    justify-content: left;
+}
+
+#message {
+    font-size: 8px;
+    display: flex;
+    width: 100%;
+    height: 10px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+#username-display {
+    visibility: hidden;
+    margin-left: 50px;
+}
+
+#login-register {
+    background: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    border: none;
+    height: 14px;
+    margin-top: -1px;
+    transition: 0.3s;
+}
+
+#login-register:hover {
+    color: red;
+}
+
+#login-form {
+    position: absolute;
+    top: 280px;
+    left: 630px;
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+
+    background-color: #050505;
+    padding: 30px;
+}
+
+#username, #password {
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+}
+
+#password {
+    margin-bottom: 40px;
+}
+
+#submit-login, #cancel-login, #submit-register {
+    background-color: white;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 10px;
+}
+
+#submit-register {
+    margin-top: 5px;
+}
+
+#cancel-login {
+    margin-top: 5px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+img {
+    height: 20px;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -75px;
+}
+
+.game-title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-title h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 29px;
+    text-align: center;
+    margin: 5px;
+}
+
+.game-title img {
+    height: 11px;
+}
+
+.game {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner {
+    border: #171717;
+    border-width: 1px;
+}
+
+.right-column {
+    margin: 0;
+    display: flex;
+    flex-direction: column
+}
+
+.left-column {
+    position: absolute;
+    left: 120px;
+    top: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#leaderboard {
+    margin-top: 10px;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+}
+
+#history-label {
+    position: absolute;
+    top: 275px;
+    left: 1180px;
+    font-size: 10px;
+}
+
+#action-toggle {
+    position: absolute;
+    top: 230px;
+    left: 1180px;
+    font-size: 35px;
+}
+
+#actions {
+    position: absolute;
+    top: 290px;
+    left: 1180px;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.actions {
+    margin: 0px;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-right: 80px;
+}
+
+.left, .right {
+    display: flex;
+}
+
+.stock-label {
+    margin-left: 80px;
+}
+
+.stock-price {
+    margin-left: 50px;
+}
+
+#stock-graph {
+    height: 360px;
+    width: 840px;
+}
+
+.scoreboard h2 {
+    margin: 0;
+    margin-top: 2px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+}
+
+.scoreboard h3 {
+    margin: 0;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9px;
+}
+
+.market-score {
+    margin-right: 50px;
+}
+
+.your-score {
+    margin-right: 0px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#grid-container {
+    position: relative;
+    width: 840px;
+    height: 360px;
+    z-index: 0;
+}
+  
+.grid-line {
+    position: absolute;
+    top: 0;
+    background-color: #2F2F2F;
+    z-index: -1;
+}
+  
+.vertical-line {
+    width: 0.5px;
+    height: 100%;
+}
+  
+.horizontal-line {
+    width: 100%;
+    height: 0.5px;
+}
+  
+.grid-label {
+    position: absolute;
+    color: white;
+    left: -30px;
+    font-size: 12px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#play_music {
+    border: 2px solid white;
+    color: red;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    margin: 0;
+    padding: 0;
+
+    margin-left: 50px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#play_music:hover {
+    background: red;
+    color: transparent;
+}
+
+#results {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: left;
+    margin-left: 100px;
+}
+
+.buy-button, .sell-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buy-button {
+    margin-right: 10px;
+}
+
+.sell-button {
+    margin-left: 10px;
+}
+
+.buy-button.active {
+    color: green;
+    border-color: green;
+}
+  
+.sell-button.active {
+    color: red;
+    border-color: red;
+}
+
+.buttons .label {
+    margin-top: 5px;
+}
+
+.button-key {
+    box-sizing: border-box;
+    width: 59px;
+    height: 59px;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@keyframes scrollText {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20%)
+    }
+    100% {
+      transform: translateY(0%);
+    }
+}
+  
+
+#binary-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #050505;
+    font-family: 'Courier New';
+    font-size: 12px;
+    line-height: 1;
+    animation: scrollText 10s linear infinite;
+    word-wrap: break-word;
+    z-index: -1;
+}
+  
+.y-axis span {
+    position: absolute;
+    width: 202px;
+    height: 16px;
+    left: 180px;
+    top: 400px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    transform: rotate(-90deg);
+}
+  
